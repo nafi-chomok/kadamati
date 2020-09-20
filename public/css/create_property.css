@@ -1,0 +1,163 @@
+input[name="bed"], input[name="bath"],input[name="park"] {
+
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: none;
+
+
+    /* background-color only for content
+    background-clip: content-box;
+    border: 2px solid #bbb;
+    background-color: #e7e6e7;
+*/
+}
+
+/* appearance for checked radiobutton */
+input[name="bath"]:checked+label {
+    background-color: lightseagreen;
+    background-clip: content-box;
+    border: 2px solid gray;
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+
+}
+/* appearance for checked radiobutton */
+input[name="bed"]:checked+label {
+    background-color: lightseagreen;
+    background-clip: content-box;
+    border: 2px solid gray;
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+
+}
+/* appearance for checked radiobutton */
+input[name="park"]:checked+label {
+    background-color: lightseagreen;
+    background-clip: content-box;
+    border: 2px solid gray;
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+
+}
+
+input[name="type"] {
+    display: none;
+}
+
+/* appearance for checked radiobutton */
+input[name="type"]:checked+label {
+    background-color: rgb(226, 108, 108);
+    background-clip: content-box;
+    border: 2px solid none;
+    border-radius: 5%;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+#listing-type {
+    background-color: gray;
+}
+
+
+/* optional styles, I'm using this for centering radiobuttons */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.nav-pills .nav-link {
+    padding: 3px 20px 3px 20px;
+    border-radius: 0;
+    background-color: rgb(175, 172, 172);
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: rgb(226, 108, 108);
+    border-radius: 0;
+}
+
+li {
+    display: inline;
+}
+
+
+
+.preview-images-zone {
+    width: 100%;
+    border: 1px solid #ddd;
+    min-height: 180px;
+    /* display: flex; */
+    padding: 5px 5px 0px 5px;
+    position: relative;
+    overflow:auto;
+}
+.preview-images-zone > .preview-image:first-child {
+    height: 185px;
+    width: 185px;
+    position: relative;
+    margin-right: 5px;
+}
+.preview-images-zone > .preview-image {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    margin-right: 5px;
+    float: left;
+    margin-bottom: 5px;
+}
+.preview-images-zone > .preview-image > .image-zone {
+    width: 100%;
+    height: 100%;
+}
+.preview-images-zone > .preview-image > .image-zone > img {
+    width: 100%;
+    height: 100%;
+}
+.preview-images-zone > .preview-image > .tools-edit-image {
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    display: none;
+}
+.preview-images-zone > .preview-image > .image-cancel {
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+}
+.preview-image:hover > .image-zone {
+    cursor: move;
+    opacity: .5;
+}
+.preview-image:hover > .tools-edit-image,
+.preview-image:hover > .image-cancel {
+    display: block;
+}
+.ui-sortable-helper {
+    width: 90px !important;
+    height: 90px !important;
+}
