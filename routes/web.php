@@ -27,9 +27,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/create-property', 'PropertyController@create');
 Route::post('/create-property', 'PropertyController@store');
 Route::get('/', 'PropertyController@index');
-Route::post('/register/user', 'auth\RegisterController@createUser');
-Route::get('/home', 'auth\RegisterController@getUsers');
-Route::delete('/delete/{user}', 'auth\RegisterController@deleteUser');
+Route::post('/register/user', 'RegisterController@createUser');
+Route::get('/home', 'RegisterController@getUsers');
+Route::delete('/delete/{user}', 'RegisterController@deleteUser');
 
 Route::get('/employee/home', function () {
     return view('pages.user_home');

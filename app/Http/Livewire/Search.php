@@ -16,7 +16,8 @@ class Search extends Component
 
 
         return view('livewire.search',
-        ['props'=>Property::whereRaw("address_address LIKE \"%$this->search%\"")->get()]
+        //['props'=>Property::whereRaw("address_address LIKE \"%$this->search%\"")->get()]
+        ['props'=>Property::where("address_address", $this->search)->get()]
     );
 //     return view('livewire.search',
 
