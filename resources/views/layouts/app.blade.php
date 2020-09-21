@@ -8,7 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title>{{ config("app.name", "Laravel") }}</title>
+    <title>
+
+        {{ config("app.name", "Laravel") }}</title>
+        <link rel="icon" href="{!! asset('img/logo-new.png') !!}"/>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -51,6 +54,15 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact-us">Contact Us</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __("Login") }}</a>
                         </li>

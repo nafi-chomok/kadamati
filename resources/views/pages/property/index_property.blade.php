@@ -76,7 +76,7 @@
             </div>
             @endforeach
 </section>
-<div class="links" style="position: absolute; margin-left:500px">
+<div class="links" style="margin: auto; margin-left:40%">
     {{ $properties->links(("pagination::bootstrap-4")) }}
 </div>
 

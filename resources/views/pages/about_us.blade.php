@@ -1,5 +1,5 @@
 @extends('layouts.app') @section('content')
-<h1>About Us</h1>
+
 <div class="container-fluid">
     <img src="/img/about-img.JPG" alt="" width="100%">
 </div>
